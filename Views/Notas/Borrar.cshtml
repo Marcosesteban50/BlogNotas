@@ -1,0 +1,15 @@
+﻿@model Notas
+@{
+    ViewData["Title"] = "Borrar Nota";
+}
+
+<h2 class="mb-3">Seguro que Deseas Borrar @Model.Nombre</h2>
+
+
+<form asp-controller="Notas" asp-action="BorrarNota"
+      id="formulario" onsubmit="BorrarRegistro(event)">
+    <input type="hidden" asp-for="Id"/>
+    <button type="submit" class="btn btn-danger" 
+    >Borrar</button>
+    <a class="btn btn-secondary" asp-action="Index">Cancelar</a>
+</form>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Notas>
+@{
+    ViewData["Title"] = "Notas";
+}
+
+
+<h1>Notas</h1>
+
+
+<a asp-action="Crear" class="btnCrearNuevo mb-3">Crear Nuevo</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Acciones</th>
+           
+            <th>Titulo</th>
+            <th>
+                Fecha Creacion
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input type="hidden" value="@item.Id" />
+                    <a class="btn btn-primary" asp-action="Editar" asp-route-id="@item.Id">Editar</a>
+                    <a class="btn btn-danger" asp-action="Borrar" asp-route-id="@item.Id">Borrar</a>
+                    <a class="btn btn-secondary" asp-action="VistaNotas" asp-route-id="@item.Id">Ver Nota</a>
+
+                </td>
+                
+                <td>
+                    
+                 @item.Nombre
+                  
+                </td>
+                <td>
+                    @item.FechaCreacion.ToString("dd/MM/yyyy")
+                </td>
+                
+
+                
+                
+                
+            </tr>
+        }
+    </tbody>
+
+</table>

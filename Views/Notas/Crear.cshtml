@@ -1,0 +1,101 @@
+﻿@model Notas
+@{
+    ViewData["Title"] = "Crear Nota";
+
+
+}
+
+
+
+<h2>Crear Nota</h2>
+
+
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+<form asp-controller="Notas" asp-action="Crear">
+
+    <div class="mb-3">
+        
+        <input type="text" asp-for="Nombre" class="form-control inputNombreNotasCrear" placeholder="Nombre"/>
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+
+    <div class="mb-3">
+        <label asp-for="Nota" class="form-label"></label>
+        <textarea id="text-input" asp-for="Nota" class="form-control TextareaNota" ></textarea>
+        <span asp-validation-for="Nota" class="text-danger"></span>
+        
+
+    </div>
+
+    <div class="divTiposLetras">
+
+       
+
+
+        <button class="bi bi-type-bold" type="button" onclick="makeBold(this)"></button>
+        <button class="bi bi-type-italic" type="button" onclick="makeItalic(this)"></button>
+        <button class="bi bi-type-underline" type="button" onclick="makeUnderline(this)"></button>
+        <button class="bi bi-type-strikethrough" type="button" onclick="StrikeThrough(this)"></button>
+        <button class="bi bi-arrows-angle-contract" type="button" onclick="Size1(this)"></button>
+        <button class="bi bi-eyedropper" type="button" onclick="Color(this)"></button>
+
+
+        
+
+        
+
+
+
+        <label>
+
+        <input type="radio" name="grupo" onclick="left(this)" />
+        <span class="bi bi-text-left spanAlign"></span>
+        </label>
+        
+        <label>
+
+        <input type="radio" name="grupo" onclick="right(this)" />
+        <span class="bi bi-text-right spanAlign"></span>
+        </label>
+
+
+          <label>
+        <input  type="radio" name="grupo" onclick="center(this)"  />
+          
+        <span class="bi bi-text-center spanAlign"></span>
+          </label>
+
+
+
+          <label>
+        <input type="radio" name="grupo" onclick="justify(this)" />
+        <span class="bi bi-justify spanAlign"></span>
+        </label>
+
+
+
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="FechaCreacion" class="form-label"></label>
+        <input class="form-control" id="txtPurchaseDate" asp-for="FechaCreacion" type="date" />
+
+        <span asp-validation-for="FechaCreacion" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-danger">Agregar</button>
+    <a class="btn btn-secondary" asp-action="Index">Cancelar</a>
+</form>
+
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+
+
+}

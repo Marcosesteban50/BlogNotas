@@ -1,0 +1,423 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+
+
+
+
+li{
+    list-style:none;
+}
+
+
+
+
+
+
+body {
+    min-height: 100vh;
+    background: white;
+    overflow:hidden;
+}
+
+
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 40px;
+    border-radius: 30px;
+}
+
+
+    form h2 {
+        color: black;
+        font-weight: 700;
+        position: relative;
+        bottom: 50px;
+    }
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    left: 34.7%;
+    top: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(18px);
+    border-radius: 30px;
+    border: 3px solid black;
+}
+
+
+
+
+  
+
+
+.inputs{
+    position: relative;
+    width: 300px;
+    background: transparent;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    color: black;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+}
+
+.inputs::placeholder{
+    color:lightslategray;
+}
+
+
+.btnLogin {
+    font-weight: 700;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+}
+
+    .btnLogin:hover {
+        background:lightslategrey;
+        
+        color: white;
+    }
+
+
+
+
+.btnRegistro {
+    font-weight: 700;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 5px 14px;
+    border: none;
+    border-radius: 5px;
+}
+
+    .btnRegistro:hover {
+        
+        background: lightcoral;
+        color: white;
+    }
+
+
+.group {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    position: relative;
+    top: 35px;
+}
+
+
+.btnCrearNuevo{
+    color:black;
+    background:gray;
+    border:1px solid black;
+    border-radius:5px;
+    padding:5px 10px;
+    transition:0.3s;
+
+}
+
+.btnCrearNuevo:hover{
+    color:black;
+    background:white;
+}
+
+
+ul{
+   
+    display:flex;
+    padding:0;
+}
+
+
+
+.form-check-input{
+    position:absolute;
+    z-index:20;
+    top:60%;
+    left:83%;
+}
+
+
+
+.container1{
+    height:100vh;
+    overflow:hidden;
+}
+
+
+.background {
+    min-height: 100vh;
+    position: absolute;
+    inset: 0;
+    background-image: url(../Imagenes/FondoAtras.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -500;
+}
+
+
+.backgroundPrincipal {
+    min-height: 100vh;
+    position: absolute;
+    inset: 0;
+    background-color: #EDBB99;
+    z-index: -500;
+}
+
+
+.PasswordInputLoginCheckBox {
+    position: absolute;
+    top: 270px;
+    border: none;
+    padding: 10px 10px;
+    transition: 0.2s;
+    background:white;
+    border:1px solid black;
+    box-shadow:none;
+}
+
+
+    .PasswordInputLoginCheckBox:checked {
+        background: black;
+        color: white;
+        border: none;
+        box-shadow: none;
+    }
+
+    .PasswordInputLoginCheckBox:focus {
+        border: 1px solid black;
+        box-shadow: none;
+    }
+.DivRecuerdame{
+    position:absolute;
+    top:330px;
+}
+
+
+.InputRecuerdame {
+    background: white;
+    
+    position: absolute;
+    top: 0px;
+    left: 120px;
+    border: 1px solid black;
+    padding: 10px 10px;
+    transition: 0.2s;
+    box-shadow:none;
+}
+
+.InputRecuerdame:checked{
+    background:black;
+    color:white;
+    border:none;
+    box-shadow:none;
+    
+    
+}
+
+.InputRecuerdame:focus{
+    border:1px solid black;
+    
+    box-shadow:none;
+
+
+}
+
+
+
+.AlertaLogin{
+    position:absolute;
+    top:0;
+    color:red;
+   font-weight:600;
+}
+
+
+
+
+.btnConfirmButton{
+    color:black;
+    background:red;
+}
+
+
+
+
+.divTiposLetras{
+   position:absolute;
+   top:140px;
+   left:935px;
+    padding:20px;
+}
+
+
+
+.TextareaNota {
+    width: 800px;
+    height: 300px;
+    color: black;
+    font-size: 20px;
+    line-height: 2.5;
+    background: #DC7633;
+    border-radius: 10px;
+}
+
+
+
+.form-control:focus{
+    box-shadow:none;
+    text-shadow:none;
+}
+
+
+
+.TextareaNota:focus {
+    color: black;
+    background: #DC7633;
+}
+
+
+
+.bi{
+    border:none;
+    background:transparent;
+    
+}
+
+
+.active{
+    background:black;
+    color:white;
+    border-radius:7px;
+}
+
+
+.inputNombreNotasCrear{
+    position:relative;
+    left:-300px;
+    border:none;
+    border-bottom:1px solid black;
+    border-radius:0px;
+}
+
+.inputNombreNotasCrear:focus{
+    background:none;
+    border-bottom:1px solid black;
+    
+}
+
+
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    
+    
+}
+
+.spanAlign{
+    position:relative;
+    color:black;
+    font-size:30px;
+    
+    
+    border-radius:7px;
+    padding:5px 5px;
+    cursor:pointer;
+}
+
+
+input[type="radio"]:checked + .spanAlign{
+    
+    background:black;
+    color:white;
+    
+    
+    
+}
+
+
+.divTiposLetras > button{
+    font-size:30px;
+}
+
+
+/*
+.bold{
+    font-weight:bold;
+}
+
+.italic{
+    font-style:italic;
+}
+
+.underline{
+    text-decoration:underline;
+}*/
+
+
+
+
+
